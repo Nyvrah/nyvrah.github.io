@@ -1,0 +1,130 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+html 
+{
+    scroll-behavior: smooth;
+}
+
+body
+{
+    height: 200vh;
+    background:black;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.l {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+}
+
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: black;
+    width: 100%;
+}
+
+section .system
+{
+    transition: left 2s, right 2s;
+    position: fixed;
+    top: 0;
+    left: 0%;
+    right: 0%;
+    margin: auto;
+}
+
+section .sun
+{
+    animation: orbitSun 32s;
+    position: absolute;
+    top: 35vh;
+    left: 43%;
+    right: 43%;
+    margin: auto;
+}
+
+section .sun img
+{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes orbitSun {
+    0% {
+        transform:rotate(360deg);
+    }
+    100% {
+        transform:rotate(0deg);
+    }
+}
+
+section .earth
+{
+    animation: orbitEarth 8s infinite linear;
+    position: absolute;
+    top: 45vh;
+    left: 48%;
+    right: 48%;
+    margin: auto;
+}
+
+section .earth img
+{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes orbitEarth {
+    0% {
+        transform:rotate(0deg)
+              translate(-300px);
+    }
+    100% {
+        transform:rotate(360deg)
+              translate(-300px);
+    }
+}
+
+section .moon
+{
+    animation: orbitMoon 2s infinite linear;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    margin: auto;
+}
+
+section .moon img
+{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes orbitMoon {
+    0% {
+        transform:rotate(0deg)
+              translate(-100px);
+    }
+    100% {
+        transform:rotate(360deg)
+              translate(-100px);
+    }
+}
